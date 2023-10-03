@@ -18,10 +18,14 @@ public class Livro {
 	private String autor;
 	
 	private List<Comentario> comentarios;
-	
+		
 
 	public List<Comentario> getComentarios() {
 		return comentarios;
+	}
+
+	public Livro(String nome) {
+		this.nome = nome;
 	}
 
 	public void setComentarios(List<Comentario> comentarios) {
@@ -75,9 +79,6 @@ public class Livro {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-	
-	
-	
 	
 	
 }
