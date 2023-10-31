@@ -30,4 +30,10 @@ public class LivrosResources {
 		return Arrays.asList(livros);	
 	}
 	
+	
+	public void salvar(Livro livro) {
+		livrosRepository.save(livro);
+		
+	}
+	
 }
