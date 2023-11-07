@@ -29,11 +29,15 @@ public class LivrosResources {
 		
 		return Arrays.asList(livros);	
 	}
-	
+	 
 	
 	public void salvar(Livro livro) {
 		livrosRepository.save(livro);
-		
 	}
+		
+		@RequestMapping(value = "/{id}", method = RequesteMethod)
+		public void deletar (@PathVariable("id") Long id) {
+			livrosRepository.deleteById(id);
+		}
 	
 }
