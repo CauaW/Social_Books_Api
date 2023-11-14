@@ -13,11 +13,11 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @Entity
-public class Livro {	
+public class Livro {
 	
-	@JsonInclude(Include.NON_NULL)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonInclude(Include.NON_NULL)
 	private Long id;
 	
 	@JsonInclude(Include.NON_NULL)
@@ -38,13 +38,13 @@ public class Livro {
 	@JsonInclude(Include.NON_NULL)
 	@Transient
 	private List<Comentario> comentarios;
-	
-	public Livro () {
-		
-	}
-
+			
 	public Livro(String nome) {
 		this.nome = nome;
+	}
+	
+	public Livro() {
+		
 	}
 
 	public Long getId() {
@@ -101,5 +101,6 @@ public class Livro {
 
 	public void setComentarios(List<Comentario> comentarios) {
 		this.comentarios = comentarios;
-	}
+	}	
+	
 }
